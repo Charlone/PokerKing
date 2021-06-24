@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Poker King{% endblock %}
+
+{% block body %}
+    <a class="fullscreen-button" href="{{ path('game_index') }}">
+        <i class="fas fa-expand-arrows-alt"></i>
+    </a>
+    <div class="game-container">
+        <img class="img-fluid card-img-top game-image-header slideInDown" src="{{ asset('build/images/components/poker_written_with_chips.png') }}" alt="Home upper wrapper image">
+        <iframe id="game-iframe" class="game slideInDown" src="{{ path('game_index') }}"></iframe>
+    </div>
+{% endblock %}

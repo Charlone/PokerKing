@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="home-section">
+        <div class="home-section-container slideInDown">
+            <img class="welcome-crown img-fluid lightSpeedIn" src="{{ asset('build/images/components/crown.png') }}" alt="King's crown">
+            <h1 class="welcome-header lightSpeedIn">Poker King</h1>
+            <img class="welcome-aces img-fluid lightSpeedIn" src="{{ asset('build/images/components/props_with_cards.png') }}" alt="image of all aces">
+            <div class="welcome-buttons lightSpeedIn">
+                <a class="btn btn-md btn-dark welcome-register" href="{{ path('registration') }}">Register for free to play</a>
+                <a class="btn btm-md btn-dark welcome-login" href="{{ path('app_login') }}">Log into your account</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

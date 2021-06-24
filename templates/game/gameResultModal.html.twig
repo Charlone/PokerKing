@@ -1,0 +1,23 @@
+<div id="game-result-modal">
+    <div class="win">
+        <img class="congrats-card-chips" src="{{ asset('build/images/components/win_cards_with_chips.png') }}" alt="Congratulations">
+        <h2 class="winner">{{ app.user.username }}</h2>
+        <p class="win-summary"></p>
+        {% include "/game/modalButtons.html.twig" %}
+    </div>
+
+    <div class="loss">
+        <h2 class="loss-header">The King wins</h2>
+        <p class="loss-p">Better luck next time</p>
+        <img class="loss-crown" src="{{ asset('build/images/components/crown.png') }}" alt="poker king crown">
+        {% include "/game/modalButtons.html.twig" %}
+    </div>
+
+    <div class="draw">
+        <h2 class="draw-header">Game ended in a draw</h2>
+        <img class="draw-image" src="{{ asset('build/images/components/draw.png') }}" alt="we play to win">
+        <h2 class="draw-message">Try your luck again!</h2>
+        {% include "/game/modalButtons.html.twig" %}
+    </div>
+
+</div>

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in to your account!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <section class="login-form-container">
+            <div class="login-form-content">
+                <form method="post" style="background: url({{ asset('build/images/components/aces_and_chips.png') }}) no-repeat 100% 100%; background-size: 30%">
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+
+                    {% if app.user %}
+                        <div class="mb-3">
+                            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                        </div>
+                    {% endif %}
+
+                    <h1 class="h3 mb-3 font-weight-normal login-header">Login</h1>
+                    <div class="form-group mb-4">
+                        <input type="text" value="" name="username" id="inputUsername" class="form-control" autocomplete="username" placeholder="Username" required autofocus>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" placeholder="Password" required>
+                    </div>
+
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Remember me
+                        </label>
+                    </div>
+
+                    <button class="btn btn-md btn-dark" type="submit">
+                        Sign in
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+{% endblock %}
