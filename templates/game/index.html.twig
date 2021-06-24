@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Poker King{% endblock %}
+
+{% block body %}
+    {% include "/alertBoxes/errorAlert.html.twig" %}
+
+    {% include "/alertBoxes/gameStartAlert.html.twig" %}
+
+    <div class="game-background">
+        <div class="game-wrapper">
+            {% include "/game/nav.html.twig" %}
+
+            {% include "/game/gameHome.html.twig" %}
+
+            {% include "/game/gameStats.html.twig" %}
+
+            {% include "/game/gameProfile.html.twig" %}
+            
+            {% include "/game/gameReset.html.twig" %}
+
+            {% include "/game/gamePlay.html.twig" %}
+
+            {% include "/game/gameResultModal.html.twig" %}
+        </div>
+    </div>
+{% endblock %}

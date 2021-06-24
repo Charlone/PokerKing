@@ -1,0 +1,632 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: #8f001a;
+}
+
+.hidden {
+    display: none;
+}
+
+// Home landing page styling
+.home-section {
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    .home-section-container {
+        background-color: #b80022;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px rgb(0 0 0 / 60%);
+        overflow: hidden;
+
+        .welcome-crown {
+            width: 10%;
+        }
+
+        .welcome-header {
+            text-align: center;
+            font-family: Cursive;
+            font-variant: small-caps;
+            letter-spacing: 2px;
+            color: white;
+            -webkit-text-stroke: 1px black;
+            font-size: 4rem;
+        }
+
+        .welcome-aces {
+            width: 50%;
+        }
+
+        .welcome-buttons {
+            padding: inherit;
+
+            .welcome-register {
+                margin-right: 10px;
+            }
+
+            .welcome-login {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+// Login page styling
+.login-form-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    .login-form-content {
+        padding: 20px;
+        background-color: #b80022;
+        box-shadow: 5px 5px rgb(0 0 0 / 60%);
+        width: 70%;
+        text-align: center;
+        border-radius: 10px;
+
+        .login-header {
+            text-align: center;
+            font-family: Cursive;
+            font-variant: small-caps;
+            letter-spacing: 2px;
+            -webkit-text-stroke: 1px black;
+            font-size: 3rem;
+        }
+
+        #inputUsername, #inputPassword {
+            width: 40%;
+            margin: auto;
+        }
+    }
+}
+
+// Registration page styling
+.container {
+    .registration-section {
+        background-image: url("~/assets/images/components/chips_with_cards.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 20%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        .registration-header {
+            text-align: center;
+            font-family: Cursive;
+            font-variant: small-caps;
+            letter-spacing: 2px;
+            color: white;
+            -webkit-text-stroke: 1px black;
+            font-size: 4rem;
+            padding-bottom: 20px;
+        }
+
+        .registration-form-section {
+            background-color: #b80022;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 5px 5px rgb(0 0 0 / 60%);
+            overflow: hidden;
+            width: 50%;
+            text-align: center;
+
+            .form-group {
+                display: flex;
+                margin-bottom: 15px;
+
+                i {
+                    font-size: 2.5rem;
+                    margin: auto;
+                }
+
+                input {
+                    width: 80%;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: nowrap;
+                margin: auto;
+                width: 75%;
+            }
+        }
+    }
+}
+
+// Game styling section
+// Game home iframe page
+.fullscreen-button {
+    position: absolute;
+    top: 116px;
+    right: 12px;
+    color: #FFFFFF;
+    z-index: 99999;
+}
+
+.game-container {
+    width: 100vw;
+    height: 100vh;
+
+    .game-image-header {
+        height: 100px;
+        object-fit: contain;
+        padding: 5px;
+    }
+
+    .game {
+        width: 100vw;
+        height: calc(100vh - 100px);
+    }
+}
+
+// alert boxes
+.alert-box, .game-start-alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px grey;
+}
+
+.game-start-alert-img {
+    width: 35%;
+}
+
+// index
+.game-background {
+    background: black;
+    width: 100vw;
+    height: 100vh;
+
+    .game-wrapper {
+        background-image: url("~/assets/images/components/las_vegas.png");
+        background-size: cover;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    // game home
+    .game-home {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height: calc(100% - 56px);
+    }
+
+    // game stats
+    .game-stats {
+        color: white;
+        font-family: Cursive;
+        font-variant: small-caps;
+        letter-spacing: 2px;
+        height: calc(100% - 56px);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        .game-stats-section {
+            .stats {
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+
+                .stats-data {
+                    background-color: rgba(25,5,5,0.8);
+                    border-radius: 10px;
+                    box-shadow: 2px 2px 2px 1px #b80022;
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 50px;
+
+                    .table-dark {
+                        td {
+                            border-bottom: 2px solid #b80022;
+                            line-height: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .game-profile {
+        color: white;
+        font-family: Cursive;
+        font-variant: small-caps;
+        letter-spacing: 2px;
+        height: calc(100% - 56px);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        .game-profile-section {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+
+            .profile {
+                background-color: rgba(25,5,5, 0.8);
+                padding: 50px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px 1px #b80022;
+            }
+        }
+    }
+
+    .game-reset {
+        color: white;
+        font-family: Cursive;
+        font-variant: small-caps;
+        letter-spacing: 2px;
+        height: calc(100% - 56px);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        .game-reset-section {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+
+            .reset {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                background-color: rgba(25,5,5, 0.5);
+                padding: 50px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px 1px #b80022;
+
+                .reset-header {
+                    text-decoration: underline solid #8f001a;
+                }
+
+                span {
+                    font-size: x-large;
+                }
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .reset-button {
+                        width: 10%;
+                    }
+                }
+            }
+        }
+    }
+
+    .game-play {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        color: white;
+        height: calc(100% - 56px);
+        font-family: Cursive;
+        font-variant: small-caps;
+        letter-spacing: 2px;
+
+        .game-play-section {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .current-balance-box {
+                align-self: flex-end;
+                width: 15%;
+                height: 36px;
+                line-height: 2rem;
+                border: 2px solid;
+            }
+
+            .opponent, .player {
+                align-self: center;
+
+                img {
+                    width: 80px;
+                    margin: 5px 10px;
+                }
+            }
+
+            .bet-amount-box {
+                display: flex;
+                justify-content: space-between;
+                width: 40%;
+                margin: 0 auto;
+                padding: 20px 0;
+
+                img {
+                    width: 60px;
+                }
+            }
+        }
+    }
+
+    #game-result-modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: rgba(25,5,5,0.7);
+        overflow: auto;
+        color: white;
+
+        .win {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 56px);
+
+            .congrats {
+                width: 45%;
+                margin: 15px;
+            }
+
+            .congrats-card-chips {
+                width: 30%;
+            }
+
+            .winner {
+                padding: 10px;
+                font-size: 2.5rem;
+            }
+
+            .win-summary {
+                font-size: 1.5rem;
+            }
+        }
+
+        .loss {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 56px);
+
+            .loss-header {
+                font-size: 2.5rem;
+            }
+
+            .loss-p {
+                font-size: 1.5rem;
+            }
+
+            .loss-crown {
+                width: 20%;
+                margin: 20px;
+            }
+        }
+
+        .draw {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 56px);
+
+            .draw-header {
+                font-size: 2.5rem;
+                padding: 10px;
+            }
+
+            .draw-image {
+                width: 20%;
+            }
+
+            .draw-message {
+                font-size: 2rem;
+                padding: 10px;
+            }
+        }
+
+        .win, .loss, .draw {
+            display: none;
+
+            .modal-play-button, .modal-quit-button {
+                border: 1px solid white;
+            }
+        }
+    }
+}
+
+// Navbar styling
+#game-navbar {
+    width: 100%;
+    background-color: rgba(25,5,5, 0.8);
+
+    .nav-link {
+        color: white;
+        font-family: Cursive;
+        font-variant: small-caps;
+        letter-spacing: 2px;
+    }
+}
+
+.navbar-nav {
+    margin: 0 10%;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+// Animation for sliding in down
+.slideInDown {
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes slideInDown {
+    0% {
+        -webkit-transform: translateY(-150%);
+        transform: translateY(-150%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes slideInDown {
+    0% {
+        -webkit-transform: translateY(-150%);
+        transform: translateY(-150%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes slideInUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes slideInUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.lightSpeedIn {
+    -webkit-animation-name: lightSpeedIn;
+    animation-name: lightSpeedIn;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes lightSpeedIn {
+    0% {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+        transform: translate3d(100%, 0, 0) skewX(-30deg);
+        opacity: 0;
+    }
+    60% {
+        -webkit-transform: skewX(20deg);
+        transform: skewX(20deg);
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: skewX(-5deg);
+        transform: skewX(-5deg);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}
+@keyframes lightSpeedIn {
+    0% {
+        -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+        transform: translate3d(100%, 0, 0) skewX(-30deg);
+        opacity: 0;
+    }
+    60% {
+        -webkit-transform: skewX(20deg);
+        transform: skewX(20deg);
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: skewX(-5deg);
+        transform: skewX(-5deg);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+    }
+}

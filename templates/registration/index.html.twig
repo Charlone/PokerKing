@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register to Play{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="registration-section">
+        <h1 class="registration-header">Register to play poker with the Poker King</h1>
+
+        <div class="registration-form-section col-6 m-auto">
+            <span class="reg-form-error alert alert-danger d-none"></span>
+                {{ form_start(form) }}
+                    <div class="registration-form-group-1">
+                        <div class="form-group">
+                            <i class="fas fa-id-badge"></i>
+                            {{ form_widget(form.first_name, {attr: {'placeholder': 'First Name', 'class': 'form-control'}}) }}
+                        </div>
+
+                        <div class="form-group">
+                            <i class="far fa-id-badge"></i>
+                            {{ form_widget(form.last_name, {attr: {'placeholder': 'Last Name', 'class': 'form-control'}}) }}
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fas fa-user"></i>
+                            {{ form_widget(form.username, {attr: {'placeholder': 'Username', 'class': 'form-control'}}) }}
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fas fa-lock-open"></i>
+                            {{ form_widget(form.password.first, {attr: {'placeholder': 'Password', 'class': 'form-control'}}) }}
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fas fa-lock"></i>
+                            {{ form_widget(form.password.second, {attr: {'placeholder': 'Repeat Password', 'class': 'form-control'}}) }}
+                        </div>
+
+                        <a href="{{ path('home') }}"><button type="button" class="btn btn-md btn-dark">Home</button></a>
+                        <button type="button" class="btn btn-md btn-dark next-button">Next</button>
+
+                    </div>
+
+                    <div class="registration-form-group-2 hidden">
+                        <div class="form-group">
+                            <i class="fas fa-envelope"></i>
+                            {{ form_widget(form.email, {attr: {'placeholder': 'Email', 'class': 'form-control'}}) }}
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fas fa-address-card"></i>
+                            {{ form_widget(form.street_address, {attr: {'placeholder': 'Street address', 'class': 'form-control'}}) }}
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fas fa-city"></i>
+                            {{ form_widget(form.city, {attr: {'placeholder': 'City', 'class': 'form-control'}}) }}
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fas fa-flag"></i>
+                            {{ form_widget(form.country, {attr: {'placeholder': 'Country', 'class': 'form-control'}}) }}
+                        </div>
+
+                        <div class="buttons">
+                            <button type="button" class="btn btn-md btn-dark back-button mr-1">Prev</button>
+                            {{ form_row(form.submit) }}
+                        </div>
+                    </div>
+                {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}
