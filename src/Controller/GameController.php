@@ -163,10 +163,11 @@ class GameController extends AbstractController
                 ['player_id' => $player_id]
             );
 
+        $em = $this->getDoctrine()
+            ->getManager();
+
         try {
             foreach ($game_rounds AS $game_round) {
-                $em = $this->getDoctrine()
-                    ->getManager();
                 $em->remove($game_round);
                 $em->flush();
             }
